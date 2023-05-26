@@ -1,0 +1,8 @@
+worldoptions:
+messages:
+  healtarget: "&eYour health has been restored."
+  healsender: "&e%player% health has been restored."
+  feedtarget: "&eYour feed level has been set to maximum."
+  feedsender: "&e%player% feed level has been set to maximum."
+  playernotexist: "&4Player could not be found."
+  onlyplayercommand: "&4This command can only be executed by player."

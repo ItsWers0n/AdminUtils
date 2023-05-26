@@ -1,0 +1,41 @@
+name: ServerManager
+version: 1.0.0
+author: ItsWers0n
+
+main: me.itswers0n.AdminUtils
+
+commands:
+  gm:
+    permission: adminutils.command.gm
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Gamemode changer command."
+  fly:
+    permission: adminutils.command.fly
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Enables flying abbility for player."
+  weatherlock:
+    aliases: wlock
+    permission: adminutils.command.weatherlock
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Locks and unlocks weather."
+  heal:
+    permission: adminutils.command.heal
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Heals target player."
+  feed:
+    permission: adminutils.command.feed
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Feeds target player."
+  day:
+    permission: adminutils.command.day
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Sets time to day."
+  night:
+    permission: adminutils.command.night
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Sets time to night."
+  repair:
+    aliases: fix
+    permission: adminutils.command.repair
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Repairs the durability of one or all items."
