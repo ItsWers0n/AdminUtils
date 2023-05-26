@@ -16,8 +16,7 @@ public class GamemodeCommand implements CommandExecutor{
         {
             if(args.length == 0) {
                 sender.sendMessage("Usage: /gm <mode> [player]");
-            }
-            if(args.length <= 2) {
+            } else if(args.length <= 2) {
                 Player p = (Player) sender;
                 Player mesSend = null;
                 if(args.length <= 1)

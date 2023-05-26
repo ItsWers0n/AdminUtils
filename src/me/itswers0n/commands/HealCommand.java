@@ -25,9 +25,9 @@ public class HealCommand implements CommandExecutor {
             if(target.equals(sender.getName())) {
                 healPlayer(Bukkit.getPlayer(target), sender, true);
             } else {
-                if(!Bukkit.getPlayer(target).isOnline()) {
+                if(Bukkit.getServer().getPlayerExact(target) == null) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.playernotexist")));
-                } { healPlayer(Bukkit.getPlayer(target), sender, false); }
+                } else { healPlayer(Bukkit.getPlayer(target), sender, false); }
 
             }
         } else {

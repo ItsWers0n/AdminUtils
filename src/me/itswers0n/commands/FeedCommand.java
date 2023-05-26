@@ -23,7 +23,7 @@ public class FeedCommand implements CommandExecutor {
             if(target.equals(sender.getName())) {
                 feedPlayer(Bukkit.getPlayer(target), sender, true);
             } else {
-                if(!Bukkit.getPlayer(target).isOnline()) {
+                if(Bukkit.getServer().getPlayerExact(target) == null) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.playernotexist")));
                 } else { feedPlayer(Bukkit.getPlayer(target), sender, false); }
 
