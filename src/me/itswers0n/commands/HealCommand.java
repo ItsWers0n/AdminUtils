@@ -27,14 +27,14 @@ public class HealCommand implements CommandExecutor {
             } else {
                 if(!Bukkit.getPlayer(target).isOnline()) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.playernotexist")));
-                }
-                healPlayer(Bukkit.getPlayer(target), sender, false);
+                } { healPlayer(Bukkit.getPlayer(target), sender, false); }
+
             }
         } else {
             if(!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.onlyplayercommand")));
-            }
-            healPlayer((Player)sender, sender, true);
+            } { healPlayer((Player)sender, sender, true); }
+
         }
         return true;
     }

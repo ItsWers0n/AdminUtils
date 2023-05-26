@@ -30,6 +30,7 @@ public class GamemodeCommand implements CommandExecutor{
                     }
                 } else {
                     p.sendMessage(ChatColor.RED + "The player could not be found");
+                    return true;
                 }
                 switch(args[0].toLowerCase()) {
                     case "0":

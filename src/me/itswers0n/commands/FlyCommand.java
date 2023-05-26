@@ -25,9 +25,7 @@ public class FlyCommand implements CommandExecutor {
             } else {
                 sender.sendMessage("Usage: /fly [player]");
             }
-        }
-
-        if(args.length == 1) {
+        } else if (args.length == 1) {
             CommandSender mesSend = null;
             if(Bukkit.getServer().getPlayerExact(args[0]) != null) {
                 if(sender instanceof Player) {

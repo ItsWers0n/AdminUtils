@@ -25,14 +25,14 @@ public class FeedCommand implements CommandExecutor {
             } else {
                 if(!Bukkit.getPlayer(target).isOnline()) {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.playernotexist")));
-                }
-                feedPlayer(Bukkit.getPlayer(target), sender, false);
+                } else { feedPlayer(Bukkit.getPlayer(target), sender, false); }
+
             }
         } else {
             if(!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("messages.onlyplayercommand")));
-            }
-            feedPlayer((Player)sender, sender, true);
+            } else { feedPlayer((Player)sender, sender, true); }
+
         }
         return true;
     }
