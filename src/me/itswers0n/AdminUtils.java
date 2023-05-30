@@ -26,6 +26,8 @@ public class AdminUtils extends JavaPlugin {
         this.getCommand("night").setExecutor(new NightCommand());
         this.getCommand("repair").setExecutor(new RepairCommand());
         this.getCommand("repair").setTabCompleter(new RepairTabComplete());
+        this.getCommand("mw").setExecutor(new MultiWorldCommand());
+        this.getCommand("mw").setTabCompleter(new MultiWorldTabComplete());
         this.getServer().getPluginManager().registerEvents(new WeatherLockListeners(), this);
         getConfig().options().copyDefaults();
         this.saveDefaultConfig();

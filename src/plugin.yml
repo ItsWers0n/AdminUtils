@@ -39,3 +39,8 @@ commands:
     permission: adminutils.command.repair
     permission-message: "Â§4You don't have permission to use this command"
     description: "Repairs the durability of one or all items."
+  multiworld:
+    aliases: mw
+    permission: adminutils.command.multiworld
+    permission-message: "Â§4You don't have permission to use this command"
+    description: "Gives access to creating, loading and travelling to other worlds."
