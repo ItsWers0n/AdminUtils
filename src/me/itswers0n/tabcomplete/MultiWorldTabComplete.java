@@ -1,5 +1,7 @@
 package me.itswers0n.tabcomplete;
 
+import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
@@ -14,7 +16,16 @@ public class MultiWorldTabComplete implements TabCompleter {
             List<String> mwArgs = new ArrayList<>();
             mwArgs.add("load");
             mwArgs.add("goto");
+            mwArgs.add("delete");
+            mwArgs.add("clone");
             return mwArgs;
+        } else if (args.length == 2 && args[0] != "load") {
+            List<String> worlds = new ArrayList<>();
+            for (World world : Bukkit.getWorlds()) {
+                String worldName = world.getName();
+                worlds.add(worldName);
+            }
+            return worlds;
         }
         return null;
     }
